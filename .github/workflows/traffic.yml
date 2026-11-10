@@ -2,7 +2,7 @@ name: Incidencias de tráfico
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # cada 10 min (GitHub puede retrasarlo)
+    - cron: "3-59/10 * * * *"   # cada 10 min, a los :03, :13... (evita los minutos más saturados; GitHub puede retrasarlo)
   workflow_dispatch: {}
   push:
     branches: [main]
